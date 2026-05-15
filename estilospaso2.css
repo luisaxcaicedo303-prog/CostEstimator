@@ -1,0 +1,263 @@
+/* -----------------------------------------------------------
+   ESTILOS GENERALES Y TIPOGRAFIA
+----------------------------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    background-color: #f8fafc;
+}
+
+/* -----------------------------------------------------------
+   NAVEGACION Y ENCABEZADO
+----------------------------------------------------------- */
+header { 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /*fija el header */
+    top: 0; /* siempre en la parte superior */
+    z-index: 1000; /* asegura que esté por encima de otros elementos */
+    padding: 15px 50px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.encabezado img {
+    height: 45px;
+    width: auto;
+}
+
+.enlaces-nav { 
+    list-style: none;
+    display: flex; 
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.enlaces-nav a { 
+    text-decoration: none; 
+    color: #0f172a;
+    font-weight: 600; 
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.enlaces-nav a:hover {
+    color: #008848;
+    transform: translateY(-2px);
+}
+
+/* -----------------------------------------------------------
+   BARRA DE PROGRESO Y CONTENEDOR PRINCIPAL
+----------------------------------------------------------- */
+.cuestionario {
+    margin-top: 120px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.contenedor-progreso {
+    margin-bottom: 30px;
+}
+
+.barra-progreso-ui {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.punto {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e2e8f0;
+}
+
+.punto.activo {
+    background: #0f2a1f;
+    border: 2px solid #ffffff;
+}
+
+.linea {
+    width: 40px;
+    height: 2px;
+    background: #e2e8f0;
+}
+
+/* -----------------------------------------------------------
+   ESTRUCTURA DE TARJETAS Y RADIOS OCULTOS
+----------------------------------------------------------- */
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* responsive */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.entrada-radio {
+    display: none;
+}
+
+.tarjeta {
+    background: white;
+    border: 2px solid #e2e8f0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: 200px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+.tarjeta:hover {
+    border-color: #cbd5e1;
+    transform: scale(1.02);
+}
+
+.tarjeta img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.tarjeta p {
+    font-size: 15px;
+    color: #64748b;
+}
+
+/* -----------------------------------------------------------
+                   LOGICA DE SELECCION 
+----------------------------------------------------------- */
+.entrada-radio:checked + .tarjeta {
+    border-color: #0caa5b;
+    background-color: #f0f7ff;
+}
+
+.marca-seleccion {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #065223;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.entrada-radio:checked + .tarjeta .marca-seleccion {
+    display: block;
+}
+
+/* -----------------------------------------------------------
+   BOTONES DE CONTROL
+----------------------------------------------------------- */
+.controles {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.btn-anterior {
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    background: #cbd5e1;
+    color: #475569;
+    font-weight: bold;
+    font-size: 13.3px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-anterior:hover {
+    background: #94a3b8;
+}
+
+.btn-siguiente {
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: none;
+    background: #08582c;
+    color: white;
+    font-weight: bold;
+    font-size: 13.3px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-siguiente:hover {
+    background: #1ca56c;
+}
+
+/* -----------------------------------------------------------
+                   DISEÑO RESPONSIVE 
+----------------------------------------------------------- */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+    }
+
+    .cuestionario {
+        margin-top: 30px;
+    }
+
+    .enlaces-nav {
+        gap: 10px;
+    }
+
+    .enlaces-nav a {
+        font-size: 14px;
+    }
+
+    .linea {
+        width: 20px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-paso h1 {
+        font-size: 22px;
+    }
+
+    .controles {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-anterior, .btn-siguiente {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
