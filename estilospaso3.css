@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    background-color: #f8fafc;
+}
+
+header { 
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0; 
+    z-index: 1000; 
+    padding: 15px 50px;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.encabezado img {
+    height: 45px;
+    width: auto;
+}
+
+.nav-links { 
+    list-style: none;
+    display: flex; 
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: #0f172a;
+    font-weight: 600; 
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #10b981; 
+}
+
+.container {
+    padding-top: 100px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.title-simulador { 
+    width: 100%;
+    text-align: center;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-design { background: linear-gradient(90deg, #053721, #10b981); }
+.card-frontend { background: linear-gradient(90deg, #0f9150, #61b123); }
+.card-backend { background: linear-gradient(90deg, #55f799, #0f9150); }
+.card-testing { background: linear-gradient(90deg, #10b981, #053721); }
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    height: 25px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    background: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: #1e293b;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tabla-detalle {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla-detalle th {
+    background-color: #5ff48963;
+    padding: 15px;
+    text-align: left;
+}
+
+.tabla-detalle td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.download-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.btn-pdf {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
+}
+
+.nav-linksprincipal {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-linksprincipal a {
+    text-decoration: none;
+    color: #475569;
+}
+
+/* -----------------------------------------------------------
+   BOTONES DE CONTROL
+----------------------------------------------------------- */
+.controles {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.btn-anterior {
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    background: #cbd5e1;
+    color: #475569;
+    font-weight: bold;
+    font-size: 13.3px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-anterior:hover {
+    background: #94a3b8;
+}
+
+.btn-siguiente {
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: none;
+    background: #08582c;
+    color: white;
+    font-weight: bold;
+    font-size: 13.3px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-siguiente:hover {
+    background: #1ca56c;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        position: static;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .nav-links {
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .container {
+        padding-top: 20px;
+    }
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
+    .detalle-section {
+        overflow-x: auto;
+    }
+    .tabla-detalle {
+        min-width: 500px;
+    }
+    .download-container {
+        justify-content: center;
+    }
+}
