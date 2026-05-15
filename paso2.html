@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CostEstimator - Paso 1</title>
+    <link rel="stylesheet" href="estilospaso2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="encabezado">
+            <img src="logo.jpeg" alt="CostEstimator">
+        </div>
+        <nav class="navegacion">
+            <ul class="enlaces-nav">
+                <li><a href="/Index.html">Inicio</a></li>
+                <li><a href="/paso2.html">Servicios</a></li>
+                <li><a href="/paso3.html">Recursos</a></li>
+                <li><a href="/paso4.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cuestionario">
+        <div class="contenedor-progreso">
+            <p><strong>Paso 1 de 4:</strong> Selección de Plataforma</p>
+            <div class="barra-progreso-ui">
+                <span class="punto activo"></span>
+                <span class="linea"></span>
+                <span class="punto"></span>
+                <span class="linea"></span>
+                <span class="punto"></span>
+                <span class="linea"></span>
+                <span class="punto"></span>
+
+            </div>
+        </div>
+
+        <section class="titulo-paso">
+            <h1>¿Qué plataforma necesitas?</h1>
+        </section>
+
+        <section class="contenedor-tarjetas">
+            
+            <input type="radio" name="plataforma" id="ios" class="entrada-radio" checked>
+            <label for="ios" class="tarjeta">
+                <div class="marca-seleccion">✓</div>
+                <img src="logoapple.png" alt="iOS">
+                <h3>iOS</h3>
+                <p>Aplicaciones para iPhone e iPad.</p>
+            </label>
+
+            <input type="radio" name="plataforma" id="android" class="entrada-radio">
+            <label for="android" class="tarjeta">
+                <div class="marca-seleccion">✓</div>
+                <img src="icone-android-grise.png" alt="Android">
+                <h3>Android</h3>
+                <p>Aplicaciones para dispositivos Android.</p>
+            </label>
+
+            <input type="radio" name="plataforma" id="web" class="entrada-radio">
+            <label for="web" class="tarjeta">
+                <div class="marca-seleccion">✓</div>
+                <img src="iconoweb.png" alt="Web">
+                <h3>Web</h3>
+                <p>Aplicaciones y sitios web accesibles.</p>
+            </label>
+
+        </section>
+
+        <div class="controles">
+            <a href="/Index.html" class="btn-anterior">Anterior</a>
+             <a href="/paso3.html" class="btn-siguiente">Siguiente</a>
+        </div>
+    </main>
+
+</body>
+</html>
