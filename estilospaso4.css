@@ -134,6 +134,16 @@ header {
     font-weight: 600;
 }
 
+.grupo-formulario input:user-invalid {
+    border-color: #e74c3c; 
+    background-color: #fdf2f2;
+  }
+  
+  .grupo-formulario input:user-valid {
+    border-color: #2ecc71; 
+    background-color: #f4fbf7;
+  }
+
 .grupo-formulario input, 
 .grupo-formulario textarea {
     width: 100%;
